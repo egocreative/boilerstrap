@@ -1,0 +1,1 @@
+$(function(){$("#accordion").tabs("#accordion .pane",{tabs:".heading",effect:"slide"})});
