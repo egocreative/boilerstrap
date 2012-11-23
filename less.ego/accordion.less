@@ -1,0 +1,44 @@
+//
+// Accordion
+// --------------------------------------------------
+
+
+.accordion {
+	
+	.heading {
+		margin:0;
+		padding:8px 12px;
+		line-height: 14px;
+		background:@grayLighter;
+		font-weight:normal;
+	  cursor: pointer;
+		margin-bottom:1px;
+
+		&:hover {
+			background:@grayLight;
+		}
+		
+		&.active,
+		&.active:hover {
+			color:@white;
+			background:@linkColor;
+		}
+	}
+
+	.pane {
+		padding:8px 12px;
+	}
+
+}
+
+.js .accordion .pane {
+	display:none;
+}
+
+.accordion-pills {
+	
+}
+
+.accordion-stacked {
+	
+}
