@@ -12,14 +12,13 @@ p {
 .lead {
   margin-bottom: @baseLineHeight;
   font-size: @baseFontSize * 1.5;
-  font-weight: 200;
   line-height: @baseLineHeight * 1.5;
 }
 
 
 // Emphasis & misc
 // -------------------------
-
+ 
 small {
   font-size: 85%; // Ex: 14px base font * 85% = about 12px
 }
@@ -133,19 +132,18 @@ dd {
 
 // MISC
 // ----
-
+ 
 // Horizontal rules
 hr {
   margin: @baseLineHeight 0;
   border: 0;
   border-top: 1px solid @hrBorder;
-  border-bottom: 1px solid @white;
 }
 
 // Abbreviations and acronyms
 abbr[title],
 // Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
-abbr[data-original-title] {
+abbr.tooltip-trigger {
   cursor: help;
   border-bottom: 1px dotted @grayLight;
 }
@@ -156,12 +154,12 @@ abbr.initialism {
 
 // Blockquotes
 blockquote {
-  padding: 0 0 0 15px;
+  padding: 20px;
   margin: 0 0 @baseLineHeight;
-  border-left: 5px solid @grayLighter;
+	background:@grayLighter;
+
   p {
     margin-bottom: 0;
-    #font > .shorthand(16px,300,@baseLineHeight * 1.25);
   }
   small {
     display: block;
@@ -175,10 +173,6 @@ blockquote {
   // Float right with text-align: right
   &.pull-right {
     float: right;
-    padding-right: 15px;
-    padding-left: 0;
-    border-right: 5px solid @grayLighter;
-    border-left: 0;
     p,
     small {
       text-align: right;

@@ -7,56 +7,82 @@
   margin: @baseLineHeight 0;
 }
 
-.pagination ul {
-  // Allow for text-based alignment
-  display: inline-block;
-  .ie7-inline-block();
-  // Reset default ul styles
-  margin-left: 0;
-  margin-bottom: 0;
-  // Visuals
-  .border-radius(@baseBorderRadius);
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+.pagination {
+  font-size: 0;
+
+	ul {
+	  // Allow for text-based alignment
+	  display: inline-block;
+	  .ie7-inline-block();
+	  // Reset default ul styles
+	  margin-left: 0;
+	  margin-bottom: 0;
+
+		> li {
+		  display: inline; // Remove list-style and block-level defaults
+
+			> a,
+			> span {
+			  float: left; // Collapse white-space
+			}
+
+		}
+		
+	}
+
+	a,
+	span {
+	  display: inline-block;
+	  .ie7-inline-block();
+	  padding: 4px 12px;
+	  line-height: @baseLineHeight;
+		font-size:@baseFontSize;
+	  text-decoration: none;
+	  background-color: @paginationBackground;
+	  border: 1px solid @paginationBorder;
+	  border-left-width: 0;
+	}
+	
+	> a:hover, 
+	> a.active,
+	> span.active,
+	li > a:hover, 
+	li.active > a,
+	li.active > span {
+	  background-color: @paginationActiveBackground;
+	}	
+	
+	> a.active,
+	> span.active,
+	li.active > a,
+	li.active > span {
+	  color: @grayLight;
+	  cursor: default;
+	}
+	
+	> span.disabled,
+	> a.disabled,
+	> a.disabled:hover,
+	li.disabled > span,
+	li.disabled > a,
+	li.disabled > a:hover {
+	  color: @grayLight;
+	  background-color: transparent;
+	  cursor: default;
+	}
+	
+	> a:first-child,
+	> span:first-child,
+	li:first-child > a,
+	li:first-child > span {
+	  border-left-width: 1px;
+	}
+	
+	li:last-child > a,
+	li:last-child > span {
+	}
 }
-.pagination ul > li {
-  display: inline; // Remove list-style and block-level defaults
-}
-.pagination ul > li > a,
-.pagination ul > li > span {
-  float: left; // Collapse white-space
-  padding: 4px 12px;
-  line-height: @baseLineHeight;
-  text-decoration: none;
-  background-color: @paginationBackground;
-  border: 1px solid @paginationBorder;
-  border-left-width: 0;
-}
-.pagination ul > li > a:hover,
-.pagination ul > .active > a,
-.pagination ul > .active > span {
-  background-color: @paginationActiveBackground;
-}
-.pagination ul > .active > a,
-.pagination ul > .active > span {
-  color: @grayLight;
-  cursor: default;
-}
-.pagination ul > .disabled > span,
-.pagination ul > .disabled > a,
-.pagination ul > .disabled > a:hover {
-  color: @grayLight;
-  background-color: transparent;
-  cursor: default;
-}
-.pagination ul > li:first-child > a,
-.pagination ul > li:first-child > span {
-  border-left-width: 1px;
-  .border-left-radius(@baseBorderRadius);
-}
-.pagination ul > li:last-child > a,
-.pagination ul > li:last-child > span {
-  .border-right-radius(@baseBorderRadius);
-}
+
 
 
 // Alignment

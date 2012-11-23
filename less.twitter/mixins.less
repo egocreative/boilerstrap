@@ -69,7 +69,8 @@
 
 // Sizing shortcuts
 // -------------------------
-.size(@height, @width) {
+// EGO: switched these round to make more sense
+.size(@width, @height) {
   width: @width;
   height: @height;
 }
@@ -683,4 +684,174 @@
 
   }
 
+}
+
+
+
+// Image replacement
+// -----------
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+
+
+// Position
+// -----------
+.relative {
+	position:relative;
+}
+.absolute {
+	position:absolute;
+}
+.absolute-tl(@top: 0px, @left: 0px) {
+  .absolute;
+	top:@top;
+	left:@left;
+}
+.absolute-tr(@top: 0px, @right: 0px) {
+  .absolute;
+	top:@top;
+	right:@right;
+}
+.absolute-bl(@bottom: 0px, @left: 0px) {
+  .absolute;
+	bottom:@bottom;
+	left:@left;
+}
+.absolute-br(@bottom: 0px, @right: 0px) {
+  .absolute;
+	bottom:@bottom;
+	right:@right;
+}
+
+
+
+// Margin Shortcuts
+// -----------
+.mb {
+	margin-bottom: @baseLineHeight !important;
+}
+.mb-half {
+	margin-bottom: @baseLineHeight * 0.5 !important;
+}
+.mb-double {
+	margin-bottom: @baseLineHeight * 2 !important;
+}
+.mb-quad {
+	margin-bottom: @baseLineHeight * 4 !important;
+
+}
+.mb-none {
+	margin-bottom: 0 !important;
+}
+.mt {
+	margin-top: @baseLineHeight !important;
+}
+.mt-half {
+	margin-top: @baseLineHeight * 0.5 !important;
+}
+.mt-double {
+	margin-top: @baseLineHeight * 2 !important;
+}
+.mt-none {
+	margin-top: 0 !important;
+}
+
+// Padding Shortcuts
+// -----------
+.pb {
+	padding-bottom: @baseLineHeight;
+}
+.pb-half {
+	padding-bottom: @baseLineHeight * 0.5;
+}
+.pb-double {
+	padding-bottom: @baseLineHeight;
+}
+
+
+
+// Shortcut for 1px border
+.border(@color: @border-color) {
+  border: 1px solid @color;
+}
+
+// Shortcut for multiple borders
+.borders(@top:'', @right: '', @bottom:'', @left: '', @color: @border-color) {
+  border-color: @color;
+  border-style: solid;
+  border:@top @right @bottom @left;
+}
+
+// Shortcut for absolute positioning
+.abspos(@top:0, @left:0) {
+  position: absolute;
+  top: @top;
+  left: @left;
+}
+
+.fill() {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+// Center a block element on the page
+.center() {
+  margin: 0 auto;
+}
+
+// Position element to absolute center (requires fixed width and height)
+.abs-center(@width:100px, @height:100px){
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: @width;
+  height: @height;
+  margin: -@height/2 0 0 -@width/2;
+}
+
+// In the child property, put the class for which child to center.
+// It comes in two parts. One to put on the container, and one on the child
+.vertical-center-container(){
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+    }
+}
+
+.vertical-center(){
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+// Adds elastic scrolling in iOS
+.ios-scroll(){
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Set text highlight color
+.text-highlight(@highlight-color, @text-color){
+  ::-moz-selection {background:@highlight-color; color: @text-color}
+  ::selection    {background:@highlight-color; color: @text-color} 
 }

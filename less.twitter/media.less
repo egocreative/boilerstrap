@@ -17,7 +17,7 @@
 // Proper spacing between instances of .media
 .media,
 .media .media {
-  margin-top: 15px;
+  margin-top: @baseMargin;
 }
 .media:first-child {
   margin-top: 0;
@@ -52,4 +52,9 @@
 .media-list {
   margin-left: 0;
   list-style: none;
+
+}
+
+.media .media-list {
+	margin-top: @baseMargin;
 }

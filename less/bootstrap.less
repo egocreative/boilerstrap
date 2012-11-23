@@ -12,7 +12,7 @@
 @import "../less.twitter/reset.less";
 
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc @import "variables-ego.less"; // Modify this for custom colors, font-sizes, etc
 @import "../less.twitter/mixins.less";
 
 // Grid system and page structure
@@ -24,6 +24,7 @@
 
 // Base CSS
 @import "../less.twitter/type.less";
+@import "type.less";
 @import "../less.twitter/code.less";
 @import "../less.twitter/forms.less";
 @import "../less.twitter/tables.less";
@@ -34,9 +35,10 @@
 @import "../less.jasny/rowlink.less"; // jasny.bootstrap
 
 // Components: common
-@import "../less.twitter/sprites.less";
+//@import "../less.twitter/sprites.less";
 @import "../less.twitter/dropdowns.less";
 @import "../less.twitter/wells.less";
+@import "wells.less"; 
 @import "../less.twitter/component-animations.less";
 @import "../less.twitter/close.less";
 
@@ -60,20 +62,18 @@
 @import "../less.jasny/navs-tabbable.less"; // jasny.bootstrap
 
 // Components: Popovers
-@import "../less.twitter/modals.less";
-@import "../less.twitter/tooltip.less";
-@import "../less.twitter/popovers.less";
-
-@import "../less.jasny/modals.less"; // jasny.bootstrap
+@import "../less.ego/overlay.less"; // ego.bootstrap
+@import "../less.ego/tooltip.less"; // ego.bootstrap
 
 // Components: Misc
 @import "../less.twitter/thumbnails.less";
 @import "../less.twitter/media.less";
 @import "../less.twitter/labels-badges.less";
 @import "../less.twitter/progress-bars.less";
-@import "../less.twitter/accordion.less";
-@import "../less.twitter/carousel.less";
-@import "../less.twitter/hero-unit.less";
+@import "../less.ego/accordion.less"; // ego.bootstrap
 
 // Utility classes
 @import "../less.twitter/utilities.less"; // Has to be last to override when necessary
+
+//@import "ego-extras.less";
+

@@ -6,13 +6,13 @@
   border: none;
   display: inline;
   padding: 0;
-  color: #555555;
+  color: @gray;
   font-weight: bold;
   .transition(text-shadow .1s linear);
+
   &:hover {
-    color: #333333;
+    color: @grayDark;
     text-decoration: none;
-    text-shadow: 1px 1px 3px rgba(85, 85, 85, 0.5);
   }
 }
 
@@ -21,34 +21,32 @@
   color: @normal;
   &:hover {
     color: @hover;
-    text-shadow: 1px 1px 3px hsla(hue(@normal), saturation(@normal), lightness(@normal), 0.5);
   }
 }
 
 // Alternative styles
 .act-primary {
-  .act-style(#006DCC, #0044CC);
+  .act-style(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
 }
 .act-info {
-  .act-style(#49AFCD, #2F96B4);
+  .act-style(@btnInfoBackground, @btnInfoBackgroundHighlight);
 }
 .act-success {
-  .act-style(#51A351, #468847);
+  .act-style(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
 }
 .act-warning {
-  .act-style(#C09853, #F89406);
+  .act-style(@btnWarningBackground, @btnWarningBackgroundHighlight);
 }
 .act-danger {
-  .act-style(#B94A48, #BD362F);
+  .act-style(@btnDangerBackground, @btnDangerBackgroundHighlight);
 }
 
 .act.disabled, 
 .act[disabled] {
-  color: #AAAAAA;
+  color: @grayLight;
   cursor: not-allowed;
   &:hover {
-    color: #AAAAAA;
-    text-shadow: none;
+	  color: @grayLight;
   }
 }
 

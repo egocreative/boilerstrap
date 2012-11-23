@@ -6,6 +6,8 @@
   overflow: hidden;
   position: relative;
   vertical-align: middle;
+	.mb-half;
+
   > input {
     position: absolute;
     top: 0;
@@ -24,7 +26,8 @@
 .fileupload {
   margin-bottom: 9px;
   .uneditable-input {
-    display: inline-block;
+    margin-top:-10px;
+		display: inline-block;
     margin-bottom: 0px;
     vertical-align: middle;
     cursor: text;
@@ -35,7 +38,13 @@
     margin-bottom: 5px;
     vertical-align: middle;
     text-align: center;
+    border: solid 1px @grayLighter;
+		padding:10px;
+		height:150px;
+		min-width: 150px;
+		
     > img {
+	    border: solid 1px @grayLighter;
       display: inline-block;
       vertical-align: middle;
       max-height: 100%;
@@ -44,6 +53,9 @@
   .btn {
     vertical-align: middle;
   }
+	.btn.fileupload-exists {
+		margin-top:-10px;
+	}
 }
 .fileupload-exists .fileupload-new,
 .fileupload-new .fileupload-exists {
@@ -55,14 +67,11 @@
 
 // Not 100% correct, but helps in typical use case
 .fileupload-new .input-append .btn-file {
-  .border-radius(0 3px 3px 0)
 }
 
 .thumbnail-borderless .thumbnail {
   border: none;
   padding: 0;
-  .border-radius(0);
-  .box-shadow(none);
 }
 .fileupload-new.thumbnail-borderless .thumbnail {
   border: 1px solid #ddd;

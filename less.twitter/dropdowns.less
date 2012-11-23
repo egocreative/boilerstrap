@@ -54,11 +54,6 @@
   border: 1px solid @dropdownBorder;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
-  .border-radius(6px);
-  .box-shadow(0 5px 10px rgba(0,0,0,.2));
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
 
   // Aligns the dropdown menu to right
   &.pull-right {
@@ -90,7 +85,7 @@
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: @dropdownLinkColorHover;
-  #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+	background:@dropdownLinkBackgroundHover;
 }
 
 // Active state
@@ -100,7 +95,8 @@
   color: @dropdownLinkColorActive;
   text-decoration: none;
   outline: 0;
-  #gradient > .vertical(@dropdownLinkBackgroundActive, darken(@dropdownLinkBackgroundActive, 5%));
+	background:@dropdownLinkBackgroundActive;
+
 }
 
 // Disabled state
@@ -168,9 +164,6 @@
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
-  -webkit-border-radius: 0 6px 6px 6px;
-     -moz-border-radius: 0 6px 6px 6px;
-          border-radius: 0 6px 6px 6px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -182,9 +175,6 @@
   bottom: 0;
   margin-top: 0;
   margin-bottom: -2px;
-  -webkit-border-radius: 5px 5px 5px 0;
-     -moz-border-radius: 5px 5px 5px 0;
-          border-radius: 5px 5px 5px 0;
 }
 
 // Caret to indicate there is a submenu
@@ -215,9 +205,6 @@
   > .dropdown-menu {
     left: -100%;
     margin-left: 10px;
-    -webkit-border-radius: 6px 0 6px 6px;
-       -moz-border-radius: 6px 0 6px 6px;
-            border-radius: 6px 0 6px 6px;
   }
 }
 
@@ -233,5 +220,4 @@
 // ---------
 .typeahead {
   margin-top: 2px; // give it some space to breathe
-  .border-radius(@baseBorderRadius);
 }
