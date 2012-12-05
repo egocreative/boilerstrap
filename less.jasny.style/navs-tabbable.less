@@ -1,0 +1,52 @@
+// Jasny.navs-tabbable.less
+// Improvements for tabbable component declared in navs.less
+// ---------------------------------------------------------
+
+
+
+// COMMON STYLES
+// -------------
+
+// Tabs on top
+.tabbable-bordered {
+  .border-radius(4px);
+  > .tab-content {
+    .border-radius(0 0 4px 4px);
+  }
+}
+
+
+// BOTTOM
+// ------
+
+.tabs-below.tabbable-bordered {
+  > .tab-content {
+    .border-radius(4px 4px 0 0);
+  }
+}
+body > .container.tabs-below.tabbable-bodered > .tab-content {
+  .border-radius(0)
+}
+
+// LEFT & RIGHT
+// ------------
+
+// Tabs on the left
+.tabs-left.tabbable-bordered {
+  > .tab-content {
+    .border-radius(0 4px 4px 0);
+  }
+}
+body > .container.tabs-left.tabbable-bodered > .tab-content {
+  .border-radius(0 0 4px 0);
+}
+
+// Tabs on the right
+.tabs-right.tabbable-bordered {
+  > .tab-content {
+    .border-radius(4px 0 0 4px);
+  }
+}
+body > .container.tabs-right.tabbable-bodered > .tab-content {
+  .border-radius(0 0 0 4px);
+}

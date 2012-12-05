@@ -1,0 +1,38 @@
+//
+// Responsive: Navbar
+// --------------------------------------------------
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+
+  // Account for brand name
+  .navbar .brand {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 0 0 -5px;
+  }
+
+  // Nav and dropdown links in navbar
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    .border-radius(3px);
+  }
+  // Buttons
+  .nav-collapse .btn {
+    .border-radius(@baseBorderRadius);
+  }
+  // Dropdowns in the navbar
+  .nav-collapse .dropdown-menu {
+    .border-radius(0);
+    .box-shadow(none);
+  }
+
+  // Forms in navbar
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)");
+  }
+
+}
