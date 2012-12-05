@@ -30,6 +30,10 @@
 	.brand {
 		margin-right:10px;
 		.pull-left;
+
+		img {
+			.size(200px, 100px);
+		}
 	}
 }
 
@@ -75,7 +79,7 @@
 // -------------------------
 .navbar .btn,
 .navbar .btn-group {
-  .navbarVerticalAlign(30px); // Vertically center in navbar
+//  .navbarVerticalAlign(30px); // Vertically center in navbar
 }
 .navbar .btn-group .btn,
 .navbar .input-prepend .btn,
@@ -196,7 +200,7 @@
 // NAVIGATION
 // ----------
 
-.navbar .nav {
+.navbar .nav-main {
   position: relative;
   left: 0;
   display: block;
@@ -204,38 +208,38 @@
   margin: 0 10px 0 0;
 	background:@white;
 }
-.navbar .nav.pull-right {
+.navbar .nav-main.pull-right {
   float: right; // redeclare due to specificity
   margin-right: 0; // remove margin on float right nav
 }
-.navbar .nav > li {
+.navbar .nav-main > li {
   float: left;
 }
 
 // Links
-.navbar .nav > li > a {
+.navbar .nav-main > li > a {
   float: none;
   // Vertically center the text given @navbarHeight
   padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
   color: @navbarLinkColor;
   text-decoration: none;
 }
-.navbar .nav .dropdown-toggle .caret {
+.navbar .nav-main .dropdown-toggle .caret {
   margin-top: 8px;
 }
 
 // Hover
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
+.navbar .nav-main > li > a:focus,
+.navbar .nav-main > li > a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
   color: @navbarLinkColorHover;
   text-decoration: none;
 }
 
 // Active nav items
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
+.navbar .nav-main > .active > a,
+.navbar .nav-main > .active > a:hover,
+.navbar .nav-main > .active > a:focus {
   color: @navbarLinkColorActive;
   text-decoration: none;
   background-color: @navbarLinkBackgroundActive;
@@ -247,8 +251,8 @@
   display: none;
   float: right;
   padding: 7px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+//  margin-left: 5px;
+//  margin-right: 5px;
 }
 .navbar .btn-navbar .icon-bar {
   display: block;
@@ -261,12 +265,53 @@
 }
 
 
+// NAVIGATION TOP 
+// --------------
+
+.navbar .nav-top {
+  display: block;
+  float: right;
+  margin: 0 10px 0 0;
+}
+.navbar .nav-top > li {
+  float: left;
+	margin-left:5px;
+}
+
+// Links
+.navbar .nav-top > li > a {
+  float: none;
+
+	.ir;
+
+	.square(40px);
+	background:@white;
+
+}
+
+// Hover
+.navbar .nav-top > li > a:focus,
+.navbar .nav-top > li > a:hover {
+  background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+  color: @navbarLinkColorHover;
+  text-decoration: none;
+}
+
+// Active nav items
+.navbar .nav-top > .active > a,
+.navbar .nav-top > .active > a:hover,
+.navbar .nav-top > .active > a:focus {
+  color: @navbarLinkColorActive;
+  text-decoration: none;
+  background-color: @navbarLinkBackgroundActive;
+}
+
 
 // Dropdown menus
 // --------------
 
 // Menu position and menu carets
-.navbar .nav > li > .dropdown-menu {
+.navbar .nav-main > li > .dropdown-menu {
   &:before {
     content: '';
     display: inline-block;
@@ -290,7 +335,7 @@
   }
 }
 // Menu position and menu caret support for dropups via extra dropup class
-.navbar-fixed-bottom .nav > li > .dropdown-menu {
+.navbar-fixed-bottom .nav-main > li > .dropdown-menu {
   &:before {
     border-top: 7px solid #ccc;
     border-top-color: @dropdownBorder;
@@ -307,26 +352,26 @@
 }
 
 // Remove background color from open dropdown
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+.navbar .nav-main li.dropdown.open > .dropdown-toggle,
+.navbar .nav-main li.dropdown.active > .dropdown-toggle,
+.navbar .nav-main li.dropdown.open.active > .dropdown-toggle {
   background-color: @navbarLinkBackgroundActive;
   color: @navbarLinkColorActive;
 }
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
+.navbar .nav-main li.dropdown > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColor;
   border-bottom-color: @navbarLinkColor;
 }
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar .nav-main li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav-main li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav-main li.dropdown.open.active > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColorActive;
   border-bottom-color: @navbarLinkColorActive;
 }
 
 // Right aligned menus need alt position
 .navbar .pull-right > li > .dropdown-menu,
-.navbar .nav > li > .dropdown-menu.pull-right {
+.navbar .nav-main > li > .dropdown-menu.pull-right {
   left: auto;
   right: 0;
   &:before {
@@ -357,22 +402,22 @@
   }
 
   .brand,
-  .nav > li > a {
+  .nav-main > li > a {
     color: @navbarInverseLinkColor;
     &:hover {
       color: @navbarInverseLinkColorHover;
     }
   }
 
-  .nav > li > a:focus,
-  .nav > li > a:hover {
+  .nav-main > li > a:focus,
+  .nav-main > li > a:hover {
     background-color: @navbarInverseLinkBackgroundHover;
     color: @navbarInverseLinkColorHover;
   }
 
-  .nav .active > a,
-  .nav .active > a:hover,
-  .nav .active > a:focus {
+  .nav-main .active > a,
+  .nav-main .active > a:hover,
+  .nav-main .active > a:focus {
     color: @navbarInverseLinkColorActive;
     background-color: @navbarInverseLinkBackgroundActive;
   }
@@ -392,19 +437,19 @@
   }
 
   // Dropdowns
-  .nav li.dropdown.open > .dropdown-toggle,
-  .nav li.dropdown.active > .dropdown-toggle,
-  .nav li.dropdown.open.active > .dropdown-toggle {
+  .nav-main li.dropdown.open > .dropdown-toggle,
+  .nav-main li.dropdown.active > .dropdown-toggle,
+  .nav-main li.dropdown.open.active > .dropdown-toggle {
     background-color: @navbarInverseLinkBackgroundActive;
     color: @navbarInverseLinkColorActive;
   }
-  .nav li.dropdown > .dropdown-toggle .caret {
+  .nav-main li.dropdown > .dropdown-toggle .caret {
     border-top-color: @navbarInverseLinkColor;
     border-bottom-color: @navbarInverseLinkColor;
   }
-  .nav li.dropdown.open > .dropdown-toggle .caret,
-  .nav li.dropdown.active > .dropdown-toggle .caret,
-  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  .nav-main li.dropdown.open > .dropdown-toggle .caret,
+  .nav-main li.dropdown.active > .dropdown-toggle .caret,
+  .nav-main li.dropdown.open.active > .dropdown-toggle .caret {
     border-top-color: @navbarInverseLinkColorActive;
     border-bottom-color: @navbarInverseLinkColorActive;
   }
