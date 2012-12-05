@@ -1,6 +1,6 @@
 $(function() {
-	
-	// Ego
+
+	// Local scroll
 	$.localScroll(
 		{
 			filter: '[data-localscroll!="false"]',
@@ -12,29 +12,27 @@ $(function() {
 		}
 	);
 	
-	//set the link
+	// Back to top link
   $('#top-link').topLink({
     min: 150,
     fadeSpeed: 500
   });
-  //smoothscroll
   $('#top-link').click(function(e) {
     e.preventDefault();
     $.scrollTo(0,300);
   });
 
+	// Prevent disabled linkes from being clicked
 	$('a.disabled').click(function(e) {
 		e.preventDefault()
 	});
 
-
+	// Responsive navbar collapse
 	$('[data-toggle="collapse"]').click(function(e) {
 		e.preventDefault()
 		
 		var	$this = $(this),
 				$target = $($this.data('target'));
-		
-		console.log($target);
 		
 		if ($this.hasClass('collapsed')) {
 			$this.removeClass('collapsed');
@@ -43,7 +41,6 @@ $(function() {
 			$this.addClass('collapsed');
 			$target.slideDown('fast');
 		}
-		
 		
 	});
 
