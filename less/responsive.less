@@ -18,41 +18,48 @@
 // -------------------------
 // Required since we compile the responsive stuff separately
 
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "../less.twitter/mixins.less";
+@import "variables.less";
+@import "../less.twitter/mixins.less"; // twitter.bootstrap
 
 
 // RESPONSIVE CLASSES
 // ------------------
 
-@import "../less.twitter/responsive-utilities.less";
+@import "../less.twitter/responsive-utilities.less"; // twitter.bootstrap
 
 
 // MEDIA QUERIES
 // ------------------
 
 // Large desktops
-@import "../less.twitter/responsive-1200px-min.less";
+@import "../less.twitter/responsive-1200px-min.less"; // twitter.bootstrap
 
 @import "../less.jasny/forms.responsive-1200px-min.less"; // jasny.bootstrap
+
 @import "../less.jasny/layouts-semifluid.responsive-1200px-min.less"; // jasny.bootstrap
+
 @import "../less.jasny/page-alert.responsive-1200px-min.less"; // jasny.bootstrap
 
 // Tablets to regular desktops
-@import "../less.twitter/responsive-768px-979px.less";
+@import "../less.twitter/responsive-768px-979px.less"; // twitter.bootstrap
 
 @import "../less.jasny/forms.responsive-768px-979px.less"; // jasny.bootstrap
+
 @import "../less.jasny/responsive-row-desktop.less"; // jasny.bootstrap
 
 // Phones to portrait tablets and narrow desktops
-@import "../less.twitter/responsive-767px-max.less";
+@import "../less.twitter/responsive-767px-max.less"; // twitter.bootstrap
+@import "../less.twitter.style/responsive-767px-max.less"; // twitter.bootstrap.style
 
 @import "../less.jasny/forms.responsive-767px-max.less"; // jasny.bootstrap
+
 @import "../less.jasny/page-alert.responsive-767px-max.less"; // jasny.bootstrap
+@import "../less.jasny.style/page-alert.responsive-767px-max.less"; // jasny.bootstrap.style
 
 
 // RESPONSIVE NAVBAR
 // ------------------
 
 // From 979px and below, show a button to toggle navbar contents
-@import "../less.twitter/responsive-navbar.less";
+@import "../less.twitter/responsive-navbar.less"; // twitter.bootstrap
+@import "../less.twitter.style/responsive-navbar.less"; // twitter.bootstrap.style

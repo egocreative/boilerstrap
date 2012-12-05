@@ -9,71 +9,116 @@
  */
 
 // CSS Reset
-@import "../less.twitter/reset.less";
+@import "../less.twitter/reset.less"; // twitter.bootstrap
+
+// Import Ego Boostrap
+@import "../less.ego/bootstrap.less"; // ego.bootstrap
 
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc @import "variables-ego.less"; // Modify this for custom colors, font-sizes, etc
-@import "../less.twitter/mixins.less";
+@import "variables.less";
+
+@import "../less.twitter/mixins.less"; // twitter.bootstrap
 
 // Grid system and page structure
-@import "../less.twitter/scaffolding.less";
-@import "../less.twitter/grid.less";
-@import "../less.twitter/layouts.less";
+@import "../less.twitter/scaffolding.less"; // twitter.bootstrap
+
+@import "../less.twitter/grid.less"; // twitter.bootstrap
+
+@import "../less.twitter/layouts.less"; // twitter.bootstrap
 
 @import "../less.jasny/layouts-semifluid.less"; // jasny.bootstrap
 
 // Base CSS
-@import "../less.twitter/type.less";
+@import "../less.twitter/type.less"; // twitter.bootstrap
 @import "type.less";
-@import "../less.twitter/code.less";
-@import "../less.twitter/forms.less";
-@import "../less.twitter/tables.less";
+@import "../less.twitter.style/type.less"; // twitter.bootstrap.style
 
+@import "../less.twitter/code.less"; // twitter.bootstrap
+@import "../less.twitter.style/code.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/forms.less"; // twitter.bootstrap
+@import "../less.twitter.style/forms.less"; // twitter.bootstrap.style
 @import "../less.jasny/forms.less"; // jasny.bootstrap
+
 @import "../less.jasny/forms-uneditable.less"; // jasny.bootstrap
+@import "../less.jasny.style/forms-uneditable.less"; // jasny.bootstrap.style
+
+@import "../less.twitter/tables.less"; // twitter.bootstrap
+@import "../less.twitter.style/tables.less"; // twitter.bootstrap.style
+
 @import "../less.jasny/actions-areas.less"; // jasny.bootstrap
+
 @import "../less.jasny/rowlink.less"; // jasny.bootstrap
 
 // Components: common
-//@import "../less.twitter/sprites.less";
-@import "../less.twitter/dropdowns.less";
-@import "../less.twitter/wells.less";
+@import "../less.twitter/dropdowns.less"; // twitter.bootstrap
+@import "../less.twitter.style/dropdowns.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/wells.less"; // twitter.bootstrap
 @import "wells.less"; 
-@import "../less.twitter/component-animations.less";
-@import "../less.twitter/close.less";
+@import "../less.twitter.style/wells.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/component-animations.less"; // twitter.bootstrap
+@import "../less.twitter.style/component-animations.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/close.less"; // twitter.bootstrap
+@import "../less.twitter.style/close.less"; // twitter.bootstrap.style
 
 // Components: Buttons & Alerts
-@import "../less.twitter/buttons.less";
-@import "../less.twitter/button-groups.less";
-@import "../less.twitter/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "../less.twitter/buttons.less"; // twitter.bootstrap
+@import "../less.twitter.style/buttons.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/button-groups.less"; // twitter.bootstrap
+@import "../less.twitter.style/button-groups.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/alerts.less"; // twitter.bootstrap
+@import "../less.twitter.style/alerts.less"; // twitter.bootstrap.style
 
 @import "../less.jasny/action-links.less"; // jasny.bootstrap
+
 @import "../less.jasny/iconic.less"; // jasny.bootstrap
+
 @import "../less.jasny/page-alert.less"; // jasny.bootstrap
+@import "../less.jasny.style/page-alert.less"; // jasny.bootstrap.style
+
 @import "../less.jasny/fileupload.less"; // jasny.bootstrap
+@import "../less.jasny.style/fileupload.less"; // jasny.bootstrap.style
 
 // Components: Nav
-@import "../less.twitter/navs.less";
-@import "../less.twitter/navbar.less";
-@import "../less.twitter/breadcrumbs.less";
-@import "../less.twitter/pagination.less";
-@import "../less.twitter/pager.less";
+@import "../less.twitter/navs.less"; // twitter.bootstrap
+@import "../less.twitter.style/navs.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/navbar.less"; // twitter.bootstrap
+@import "../less.twitter.style/navbar.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/breadcrumbs.less"; // twitter.bootstrap
+@import "../less.twitter.style/breadcrumbs.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/pagination.less"; // twitter.bootstrap
+@import "../less.twitter.style/pagination.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/pager.less"; // twitter.bootstrap
 
 @import "../less.jasny/navs-tabbable.less"; // jasny.bootstrap
-
-// Components: Popovers
-@import "../less.ego/overlay.less"; // ego.bootstrap
-@import "../less.ego/tooltip.less"; // ego.bootstrap
+@import "../less.jasny.style/navs-tabbable.less"; // jasny.bootstrap.style
 
 // Components: Misc
-@import "../less.twitter/thumbnails.less";
-@import "../less.twitter/media.less";
-@import "../less.twitter/labels-badges.less";
-@import "../less.twitter/progress-bars.less";
+@import "../less.twitter/thumbnails.less"; // twitter.bootstrap
+@import "../less.twitter.style/thumbnails.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/media.less"; // twitter.bootstrap
+
+@import "../less.twitter/labels-badges.less"; // twitter.bootstrap
+@import "../less.twitter.style/labels-badges.less"; // twitter.bootstrap.style
+
+@import "../less.twitter/progress-bars.less"; // twitter.bootstrap
+@import "../less.twitter.style/progress-bars.less"; // twitter.bootstrap.style
+
+@import "../less.ego/overlay.less"; // ego.bootstrap
+
+@import "../less.ego/tooltip.less"; // ego.bootstrap
+
 @import "../less.ego/accordion.less"; // ego.bootstrap
 
 // Utility classes
 @import "../less.twitter/utilities.less"; // Has to be last to override when necessary
-
-//@import "ego-extras.less";
-
