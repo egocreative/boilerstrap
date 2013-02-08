@@ -1,0 +1,10 @@
+.sprite-helper(@image, @x, @y, @spriteX, @spriteY) {
+	background: url("images/sprite-@{image}.png") no-repeat;
+	background-position: -(@x*@spriteX) -(@y*@spriteY);
+}
+
+.sprite(@image, @x, @y) when (@image = 'icons') {
+	@spriteX: 50px;
+	@spriteY: 50px;
+	.sprite-helper(@image, @x, @y, @spriteX, @spriteY);
+}
