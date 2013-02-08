@@ -1,6 +1,6 @@
 <?php include('includes/document-header.php'); ?>
 
-		<title></title>
+		<title>Boilerstrap</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
@@ -25,12 +25,6 @@
 			  {
 				  load: ['/js/site-ck.js'] // Split into seperate load functions, or see docs: http://yepnopejs.com/
 			  },
-				// Simple example, only loads js if the canvas 
-			  // { 
-			  // 					test: Modernizr.canvas,
-			  // 					yep: ['/js/cool-canvas-piece.js']
-			  // }
-				
 			]);
 			
 		</script>
@@ -42,9 +36,9 @@
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<a href="#content" class="hide">Skip to main content</a>
-
-		<!-- Add your site or application content here -->
-		<p>Hello world! This is HTML5 Boilerplate.</p>
+		<div id="skip-links">
+			<a href="#content">Skip to main content</a>
+			<!-- <a href="#search">Skip to search</a> -->
+		</div>
 
 <?php include('includes/document-footer.php'); ?>

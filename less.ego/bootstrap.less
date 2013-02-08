@@ -10,9 +10,28 @@ div:not('.uneditable-input') {
 	margin-left: 0 !important;
 }
 
-#top-link  {
+#top-link {
 	display:none;
 	position:fixed;
 	right:20px;
 	bottom:20px;
+}
+
+#skip-links a {
+	height:1px;
+	left:0;
+	overflow:hidden;
+	position:absolute;
+	top:-500px;
+	width:1px;
+	padding: 10px;
+	display: block;
+	background: @white;
+
+	&:active,
+	&:focus {
+		position:static;
+		height:auto;
+		width:auto;
+	}
 }
