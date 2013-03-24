@@ -1,0 +1,32 @@
+@include font-face("fontello", font-files("/fonts/fontello.woff", "/fonts/fontello.ttf", "/fonts/fontello.svg"), "/fonts/fontello.eot");
+
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  line-height: 1em;
+  margin-left: 0.2em;
+}
+
+.icon-delicious:before { content: '\23'; } /* '#' */
+.icon-gplus:before { content: '\2b'; } /* '+' */
+.icon-stumbleupon:before { content: '\2f'; } /* '/' */
+.icon-pinterest:before { content: '\31'; } /* '1' */
+.icon-digg:before { content: '\3b'; } /* ';' */
+.icon-linkedin:before { content: '\4c'; } /* 'L' */
+.icon-twitter:before { content: '\54'; } /* 'T' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+
+.icon-tag-1:before { content: '\e800'; } /* '' */
+.icon-comment:before { content: '\e718'; } /* '' */
+.icon-user:before { content: '👤'; } /* '\1f464' */
+.icon-bookmark:before { content: '🔖'; } /* '\1f516' */
+.icon-clock:before { content: '🕔'; } /* '\1f554' */

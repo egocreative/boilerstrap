@@ -1,0 +1,12 @@
+{
+  "name": "comments",
+  "version": "1.0.0",
+  "main": "./comments.js",
+  "dependencies": {
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "jquery": "latest",
+    "jquery-form": "latest",
+    "jquery.validation": "latest"
+  }
+}

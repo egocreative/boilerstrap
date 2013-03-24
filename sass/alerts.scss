@@ -1,0 +1,19 @@
+.alert-box {
+
+	.title {
+		margin-top: 0;
+		color: $white;
+		font-size: ms(1);
+	}
+
+	.content {
+		@include clearfix;
+
+		a {
+			color: $white;
+		}
+		a:last-child {
+			float: right;
+		}
+	}
+}

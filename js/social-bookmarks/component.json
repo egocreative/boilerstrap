@@ -1,0 +1,12 @@
+{
+  "name": "Social Bookmarks",
+  "version": "1.0.0",
+  "main": "./social-bookmarks.js",
+  "dependencies": {
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "jquery": "latest",
+    "jquery-form": "latest",
+    "jquery.validation": "latest"
+  }
+}

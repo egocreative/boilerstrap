@@ -1,0 +1,8 @@
+.tabs {
+	&.small {
+		li a {
+			@include font-size(11);
+			padding: 0 10px;
+		}
+	}
+}

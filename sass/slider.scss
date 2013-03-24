@@ -1,0 +1,35 @@
+
+.slider {
+
+	li {
+		position: relative;
+		@include ignore-whitespace
+	}
+
+	img {
+	}
+
+	.title {
+		position: absolute;
+		top: 5%;
+		left: 5%;
+
+		&.invert{
+			color: $white;
+		}
+	}
+
+
+}
+
+.js {
+
+}
+
+.slider {
+
+	li {
+		display: none;
+	}
+
+}

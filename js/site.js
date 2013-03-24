@@ -1,48 +1,48 @@
+var Site = {
+	Standard: {
+		Duration: 500,
+		Easing: 'easeInOutQuad'
+	},
+	Heights: {}
+};
+
 $(function() {
+
+	Site.Heights.TopBar = $('.top-bar').outerHeight();
+
+	$(window).bind('resize', function(event) {
+		Site.Heights.TrueBody = $('body').height();
+		Site.Heights.TrueWindow = $(window).height();
+		Site.Heights.Body = Site.Heights.TrueBody - Site.Heights.TopBar;
+		Site.Heights.Window = Site.Heights.TrueWindow - Site.Heights.TopBar;
+	}).trigger('resize');
 
 	// Local scroll
 	$.localScroll(
 		{
 			filter: '[data-localscroll!="false"]',
-			easing: 'easeInOutQuad',
-			duration: 1000,
+			easing: Site.Standard.Easing,
+			duration: Site.Standard.Duration,
 			offset: {
 				top: -10
 			}
 		}
 	);
-	
+
 	// Back to top link
-  $('#top-link').topLink({
-    min: 150,
-    fadeSpeed: 500
-  });
-  $('#top-link').click(function(e) {
-    e.preventDefault();
-    $.scrollTo(0,300);
-  });
+	$('#top-link').topLink({
+		min: 150,
+		fadeSpeed: Site.Standard.Duration
+	});
+	$('#top-link').click(function(e) {
+		e.preventDefault();
+		$.scrollTo( 0, Site.Standard.Duration );
+	});
 
 	// Prevent disabled linkes from being clicked
 	$('a.disabled').click(function(e) {
 		e.preventDefault()
 	});
 
-	// Responsive navbar collapse
-	$('[data-toggle="collapse"]').click(function(e) {
-		e.preventDefault()
-		
-		var	$this = $(this),
-				$target = $($this.data('target'));
-		
-		if ($this.hasClass('collapsed')) {
-			$this.removeClass('collapsed');
-			$target.slideUp('fast');
-		} else {
-			$this.addClass('collapsed');
-			$target.slideDown('fast');
-		}
-		
-	});
 
-	
 });

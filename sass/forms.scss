@@ -1,0 +1,8 @@
+textarea {
+	&.resize-vert {
+		resize: vertical;
+	}
+	&.resize-none {
+		resize: none;
+	}
+}

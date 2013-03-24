@@ -1,0 +1,4 @@
+.orbit-wrapper {
+  .slider-nav span { @include opacity(0); @include single-transition(opacity, 400ms); }
+  &:hover .slider-nav span { @include opacity(1); }
+}

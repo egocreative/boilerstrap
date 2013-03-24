@@ -513,7 +513,7 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 # php_flag log_errors On
 
 # Do not display errors in browser (production - Off, development - On)
-# php_flag display_errors Off
+ php_flag display_errors On
 
 # Do not display startup errors (production - Off, development - On)
 # php_flag display_startup_errors Off

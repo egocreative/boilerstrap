@@ -1,0 +1,14 @@
+
+#footer-top {
+	background:$secondaryColor;
+
+}
+
+#footer-bottom {
+	background:$mainColor;
+	color: $white;
+
+	a {
+		color: inherit;
+	}
+}

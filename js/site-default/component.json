@@ -1,0 +1,13 @@
+{
+  "name": "Site Defaults",
+  "version": "1.0.0",
+  "main": "./site-defaults.js",
+  "dependencies": {
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "modernizr": "latest",
+    "jquery": "latest",
+    "foundation": "latest",
+    "jquery.localScroll": "latest"
+  }
+}

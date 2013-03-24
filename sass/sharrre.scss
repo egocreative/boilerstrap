@@ -1,0 +1,89 @@
+$sharrreWidth: 366px;
+$sharreHeight: 2.2em;
+
+.sharrre {
+
+	.box {
+		background: $mainColor;
+		height:$sharreHeight;
+		display:inline-block;
+		position:relative;
+		padding:0px 45px 0 0;
+		float:left;
+		clear:both;
+		overflow:hidden;
+
+		@include single-transition(all, 0.3s, linear);
+
+		&:hover{
+			padding-right:$sharrreWidth;
+
+			.middle{
+				width:$sharrreWidth - 30;
+			}
+			.left {
+				background: lighten($mainColor, 10%);
+			}
+			.right {
+				background: lighten($mainColor, 10%);
+			}
+		}
+	}
+
+	.left {
+		line-height:$sharreHeight;
+		display:block;
+		padding:0 9px 0 9px;
+		white-space:nowrap;
+		color:#ffffff;
+		cursor: pointer;
+
+		@include single-transition(all, 0.3s, linear);
+	}
+
+	.middle{
+		position:absolute;
+		height:$sharreHeight;
+		top:0px;
+		right:30px;
+		width:0px;
+		color:#fff;
+		white-space:nowrap;
+		text-align:left;
+		overflow:hidden;
+
+		@include single-transition(width, 0.3s, linear);
+
+
+		a {
+			color:#fff;
+			border-left: solid 1px $white;
+			font-weight:bold;
+			padding:0 9px 0 9px;
+			text-align:center;
+			float:left;
+			line-height:$sharreHeight;
+
+			&:hover{
+				text-decoration:none;
+				background: darken($mainColor, 10%);
+			}
+		}
+
+	}
+
+
+	.right{
+		position:absolute;
+		right:0px;
+		top:0px;
+		height:100%;
+		padding:0 9px 0 9px;
+		font-weight: bold;
+		line-height:$sharreHeight;
+		color:$white;
+		border-left: solid 1px $white;
+	}
+
+
+}

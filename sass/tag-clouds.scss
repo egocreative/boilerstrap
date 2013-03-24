@@ -1,0 +1,25 @@
+.tag-cloud {
+
+	@include inline-list;
+
+	a {
+		padding: 5px;
+	}
+
+	.tag-cloud-1 {
+		font-size: ms(0);
+	}
+	.tag-cloud-2 {
+		font-size: ms(1);
+	}
+	.tag-cloud-3 {
+		font-size: ms(2);
+	}
+	.tag-cloud-4 {
+		font-size: ms(3);
+	}
+	.tag-cloud-5 {
+		font-size: ms(4);
+	}
+
+}

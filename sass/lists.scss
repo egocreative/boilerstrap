@@ -1,0 +1,42 @@
+.no-bullets {
+	@include no-bullets;
+}
+
+.metadata-list {
+	@include no-bullets;
+	@include clearfix;
+
+	li {
+		float: left;
+		margin-right: 10px;
+	}
+
+	.author {
+		width: 100%;
+		font-size: ms(1);
+		@include trailing-border(1px);
+		@include margin-trailer(1)
+
+
+//		border-bottom: $default-rhythm-border-style 1px $mainColor;
+
+
+	}
+
+	.date-time {
+		clear: both;
+	}
+
+	.categories {
+
+	}
+
+	.tags {
+
+	}
+
+	.comment-count {
+
+	}
+
+}

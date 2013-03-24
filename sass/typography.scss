@@ -1,0 +1,39 @@
+// Headings
+//h1, h2, h3, h4, h5, h6 { font-size: ms(0); }
+
+.h1 { font-size: ms(6); }
+.h2 { font-size: ms(4); }
+.h3 { font-size: ms(3); }
+.h4 { font-size: ms(2); }
+.h5 { font-size: ms(1); }
+.h6 { font-size: ms(0); }
+
+aside p {
+  font-style: normal;
+}
+
+
+.top-bar ul > li.name {
+
+  h1, h2 {
+    margin: 0;
+    font-size: ms(0);
+    color: $white;
+    padding: 0 15px;
+
+    a {
+      font-size: ms(0);
+      padding: 0;
+    }
+  }
+}
+
+
+div[itemprop="articleBody"] {
+  p:first-child {
+    font-size: ms(0) * 1.25;
+    line-height: 1.6;
+    margin-bottom: ms(1);
+    font-weight: bold;
+  }
+}

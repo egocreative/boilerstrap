@@ -5,6 +5,7 @@
 
 ?>
 
-
+<div class="row">
+</div>
 
 <?php include('includes/document-footer.php'); ?>
